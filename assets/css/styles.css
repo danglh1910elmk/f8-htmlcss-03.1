@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color-black-green: #143c3c;
+    --secondary-color-light-green: #e2eddf;
+    --text-color-black-gray: #575d5e;
+    --text-color-white: #fff;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -15,3 +22,245 @@ html,
 body {
     scroll-behavior: smooth;
 }
+
+/* !================== common selectors =================== */
+.container {
+    width: 1140px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    width: 173px;
+    height: 57px;
+    border-radius: 40px;
+    background: var(--primary-color-black-green, #143c3c);
+    color: var(--text-color-white, #fff);
+    text-align: center;
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 57px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+/* !================== header =================== */
+.header {
+    position: sticky;
+    top: 0;
+    margin-top: 20px;
+    padding: 8px 0;
+    z-index: 1;
+    background-color: pink;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 0 18px;
+    margin-left: 396px;
+}
+
+.header-nav__link {
+    padding: 10px;
+    color: var(--text-color-black-gray, #575d5e);
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.56;
+}
+
+.header__cta {
+    margin-left: auto;
+}
+
+/* !================== hero section =================== */
+.hero {
+    font-family: "Public Sans";
+    padding: 66px 0 165px;
+}
+
+.hero__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__content {
+    padding-top: 43px;
+}
+
+.hero__title {
+    max-width: 374px;
+    color: var(--primary-color-black, #152427);
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero__desc {
+    margin-top: 20px;
+    max-width: 341px;
+    color: var(--text-color-black-gray, #575d5e);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.56;
+}
+
+.hero__cta-group {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    column-gap: 38px;
+}
+
+.hero__watch-video-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    background-color: transparent;
+    height: 57px;
+    padding: 0 5px;
+    border-radius: 40px;
+}
+
+.hero__watch-video-btn:hover .partial-circle {
+    transform: rotate(135deg);
+}
+
+.hero__watch-video-btn:hover .triangle-icon {
+    transform: rotate(120deg);
+}
+
+.triangle-icon-wrapper {
+    flex-shrink: 0;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-color: #83a17d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.partial-circle {
+    position: absolute;
+    height: 57px;
+    width: 57px;
+
+    border: 4px solid transparent;
+    border-top: 4px solid var(--primary-color-black-green, #143c3c);
+    border-left: 4px solid var(--primary-color-black-green, #143c3c);
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    transition: 0.6s ease;
+}
+
+.triangle-icon {
+    transition: 0.6s ease;
+}
+
+.hero__watch-video-btn span {
+    color: #152427;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+/* ===== image block ===== */
+.hero__img-block {
+    position: relative;
+}
+
+.thread {
+    position: absolute;
+    overflow: visible;
+    z-index: 1;
+}
+
+.thread.first {
+    left: -172px;
+    top: -32px;
+}
+
+.thread.second {
+    transform: rotate(175.95deg);
+    right: 46px;
+    bottom: -145px;
+}
+
+.hero__image-underlay {
+    width: 340px;
+    height: 340px;
+    border-radius: 340px;
+    background: #4dbb9a;
+    filter: blur(137px);
+    margin-bottom: 4px;
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.hero__img-wrapper {
+    display: flex;
+    column-gap: 20px;
+}
+
+.hero__img {
+    width: 202px;
+    height: 466px;
+    border-radius: 110px;
+    object-fit: cover;
+}
+
+.hero__img:nth-child(2) {
+    transform: translateY(77px);
+}
+
+/* !================== company section =================== */
+.company {
+    margin-top: 42px;
+}
+
+.company__discord-agworld {
+    display: flex;
+    align-items: center;
+    column-gap: 11px;
+}
+
+.company__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 77px 121px;
+    border-radius: 100.5px;
+    background: var(--secondary-color-light-green, #e2eddf);
+}
+
+/* !================== services section =================== */
